@@ -32,3 +32,21 @@ Quais os filmes que ganharam o Oscar de Melhor Filme?
 Bonus: Quais os filmes que ganharam o Oscar de Melhor Filme e Melhor Diretor na mesma cerimonia?
 
 Bonus: Denzel Washington e Jamie Foxx já concorreram ao Oscar no mesmo ano?
+
+-- 1 use oscar_database;
+select count(*)  as emilly
+from indicados_ao_oscar
+where nome_do_indicado like "%Natalie Portman%" 
+and vencedor = "true";
+
+-- 2 select nome_do_indicado, vencedor 
+from indicados_ao_oscar 
+where nome_do_indicado 
+like "%Amy Adams%";
+
+-- 3 select * from indicados_ao_oscar where nome_do_filme like "%toy story%" and vencedor = "true";
+
+-- 4 select ano_filmagem, ano_cerimonia, categoria 
+from indicados_ao_oscar 
+where categoria = "Actress"
+order by ano_cerimonia desc ;
